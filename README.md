@@ -2,7 +2,7 @@
 
 This repository holds the scripts used in **"Chromosome-scale genome of a twig-girdler longhorn beetle
 reveals clustered genomic organization of herbivory-linked functions"**
-(Souza et al., *BMC Genomics*, under review.
+(Souza et al., *BMC Genomics*, under review).
 
 ## Repository
 
