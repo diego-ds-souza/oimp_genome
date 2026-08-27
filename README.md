@@ -1,26 +1,25 @@
 # *Oncideres impluviata* genome — analysis code
 
-Scripts used in **"Chromosome-scale genome of a twig-girdler longhorn beetle
+This repository holds the scripts used in **"Chromosome-scale genome of a twig-girdler longhorn beetle
 reveals clustered genomic organization of herbivory-linked functions"**
-(Souza et al., *BMC Genomics*).
+(Souza et al., *BMC Genomics*, under review.
 
-Sequence data and large intermediate files are not in this repository; see
-[Data](#data).
+## Repository
 
-## Repository layout
+Directories follow the order of the Methods in the paper.
 
-Directories follow the order of the Methods.
+| Directory | Methods section | Contents |
+|---|---|---|
+| `01_sequencing/` | 2. DNA extraction and genome sequencing; 4. RNA extraction and sequencing | Read statistics; *k*-mer counting and genome-size estimation; RNA-seq trimming and de novo transcriptome assembly |
+| `02_assembly/` | 3. Genome assembly and chromosome-scale inference | Assembly, haplotig purging, assembly QC, scaffold naming, telomere identification, synteny |
+| `03_annotation/` | 5. Gene prediction and annotation | Repeat modelling and masking; structural and functional annotation; annotation completeness |
+| `04_orthology/` | 6. Comparative genomics | Proteome retrieval, isoform collapsing, orthology inference, phylogeny, orthogroup classification |
+| `05_gene_family_evolution/` | 6. Comparative genomics | Birth–death modelling of gene family size with CAFE; host-interface family summary |
+| `06_go_enrichment/` | 6. Comparative genomics | Study gene sets, GO mapping, enrichment of expanded orthogroups |
+| `07_transcriptomics/` | 7. Transcriptomic profiling and gene family analysis | Family assignment, quantification, differential expression, expression figures |
+| `08_chromosomal_organization/` | 8. Chromosomal organization of host-interface genes | Chromosome coordinates, tandem clusters, superloci, ideograms, enrichment tests |
 
-| Directory | Methods section |
-|---|---|
-| `01_sequencing/` | 2. DNA extraction and genome sequencing; 4. RNA extraction and sequencing |
-| `02_assembly/` | 3. Genome assembly and chromosome-scale inference |
-| `03_annotation/` | 5. Gene prediction and annotation |
-| `04_orthology/` | 6. Comparative genomics — orthology and phylogeny |
-| `05_gene_family_evolution/` | 6. Comparative genomics — gene family evolution |
-| `06_go_enrichment/` | 6. Comparative genomics — GO enrichment |
-| `07_transcriptomics/` | 7. Transcriptomic profiling and gene family analysis |
-| `08_chromosomal_organization/` | 8. Chromosomal organization of host-interface genes |
+---
 
 Each directory holds its scripts in run order and a README listing them.
 
@@ -29,26 +28,46 @@ Each directory holds its scripts in run order and a README listing them.
 Scripts are run **from the repository root**, with no arguments:
 
 ```bash
-conda env create -f 01_sequencing/environment.yml
 conda activate oimp_01_sequencing
 bash 01_sequencing/02_kmer_count.sh
 ```
 
-Inputs are read from `data/` and results written to `results/<section>/`;
-neither directory is tracked by git. See [`data/README.md`](data/README.md).
+**Paths are relative to the repository root.** Inputs are read from `data/`
+and results are written to `results/<section>/`. 
 
-Paths, thread counts and parameters are in a settings block at the top of each
-script. Edit them, or override any of them on the command line:
+**Settings live in a block at the top of each script**, so the file records
+exactly what was run:
+
+```bash
+# ------------------------------- settings ------------------------------------
+READS="${READS:-data/hifi_reads.fastq}"        # PacBio HiFi reads, uncompressed
+K="${K:-21}"                                   # k-mer length (21 for GenomeScope)
+THREADS="${THREADS:-10}"                       # CPU threads
+# -----------------------------------------------------------------------------
+```
+
+Edit them, or override any of them on the command line:
 
 ```bash
 READS=data/my_reads.fastq THREADS=32 bash 01_sequencing/02_kmer_count.sh
 ```
 
-The scripts in `04_orthology/isoform_collapse/` are general-purpose tools and
-take command-line arguments instead.
+The few scripts that are general-purpose tools rather than a record of one
+analysis take command-line arguments instead; each says so in its header and
+prints usage when run with `-h`.
 
-Each section has its own `environment.yml`, named `oimp_<section>`. R scripts
-were run under R 4.3. The sections are meant to be run in order.
+**Environments.** Each section has its own `environment.yml`, named
+`oimp_<section>`:
+
+```bash
+conda env create -f 01_sequencing/environment.yml
+conda activate oimp_01_sequencing
+```
+
+R scripts were run under R 4.3 with `ape`, `ggplot2`, `ggtree`, `DESeq2`,
+`circlize` and `RColorBrewer`. 
+
+The sections are meant to be run in order.
 
 ## Software
 
@@ -67,30 +86,10 @@ were run under R 4.3. The sections are meant to be run in order.
 | GO enrichment | GOATOOLS v1.3.1, go-basic.obo 2024-01-17 |
 | Expression | Salmon v1.10, DESeq2 v1.38 |
 
-## Data
-
-| Resource | Accession |
-|---|---|
-| BioProject | [PRJNA1256903](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1256903) |
-| Genome assembly and annotation | [GCA_060235215.1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_060235215.1/) |
-| PacBio HiFi reads | SRR38808688 |
-| RNA-seq libraries | SRR38815773–SRR38815781 |
-| Comparison proteomes | see Table S2 |
-
-Result tables are published with the paper as Supplementary Tables S1–S18 and
-Supplementary files 1–7. Intermediate files that exceed GitHub's size limits —
-assembly graphs, alignments, the OrthoFinder working directory, per-orthogroup
-alignments and the raw CAFE output — are omitted and can be regenerated with
-these scripts.
+---
 
 ## Citation
 
-> Souza D, Sylvester T, et al. Chromosome-scale genome of a twig-girdler
+> Souza DS, et al. Chromosome-scale genome of a twig-girdler
 > longhorn beetle reveals clustered genomic organization of herbivory-linked
-> functions. *BMC Genomics*. 2026.
-
-## Contact
-
-Diego Souza — tsepulveda@fieldmuseum.org
-
-Released under the MIT License (see `LICENSE`).
+> functions. *BMC Genomics*. 2026 (under review).
