@@ -1,0 +1,10 @@
+name: oimp_05_gene_family_evolution
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - cafe=5.1.0            # provides the cafe5 binary (hahnlab/CAFE5); linux-64
+  - python=3.11
+  - matplotlib-base
+  - r-base=4.3
+  - r-ape                 # chronos(), for making the IQ-TREE phylogram ultrametric

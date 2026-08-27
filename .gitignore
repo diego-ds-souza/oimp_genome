@@ -1,0 +1,53 @@
+# macOS / editors
+.DS_Store
+._*
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.pyc
+
+# sequence and alignment data
+*.fa
+*.fasta
+*.faa
+*.fna
+*.fastq
+*.fq
+*.fq.gz
+*.fastq.gz
+*.bam
+*.sam
+*.cram
+*.paf
+*.gff
+*.gff3
+*.gtf
+*.bed
+*.vcf
+
+# assembly and annotation intermediates
+*.gfa
+*.ec.bin
+*.ovlp*
+OrthoFinder/
+WorkingDirectory/
+*_align/
+trimmed/
+
+# large results kept in the supplementary files instead
+*.tab
+Base_*.tre
+*.divsum
+*.divsum.table
+
+# logs and job files
+*.err
+*.out
+*.log
+slurm-*.out
+
+# local working directories, not part of the repository
+_to_delete/
+_final_analyses_for_repository/
+oimp_repo.tar.gz

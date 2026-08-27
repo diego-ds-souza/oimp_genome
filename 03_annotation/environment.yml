@@ -1,0 +1,20 @@
+name: oimp_03_annotation
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - repeatmodeler=2.0.6
+  - repeatmasker=4.1.8
+  - rmblast=2.14.1
+  - funannotate=1.8.17
+  - busco=5.2.2
+  - agat
+  - python=3.10
+  - r-base=4.3
+  - r-tidyverse
+  - r-ggplot2
+  - r-reshape
+  - r-viridis
+  - r-hrbrthemes
+  - r-gridextra
+  - r-ggpubr

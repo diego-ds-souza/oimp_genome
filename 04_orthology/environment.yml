@@ -1,0 +1,22 @@
+name: oimp_04_orthology
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - ncbi-datasets-cli
+  - compleasm
+  - orthofinder=2.5.5
+  - diamond
+  - mafft=7.520
+  - trimal=1.4
+  - iqtree=3.1.3
+  - seqkit
+  - python=3.10
+  - biopython
+  - pandas
+  - r-base=4.3
+  - r-ape
+  - r-readr
+  - r-dplyr
+  - r-tidyr
+  - r-ggplot2

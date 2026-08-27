@@ -1,0 +1,17 @@
+name: oimp_07_transcriptomics
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - salmon=1.10
+  - seqkit
+  - r-base=4.3
+  - bioconductor-deseq2=1.38
+  - bioconductor-tximport
+  - r-tidyverse
+  - r-pheatmap
+  - r-rcolorbrewer
+  - r-scales
+  - r-ggrepel
+  - r-patchwork
+  - r-upsetr

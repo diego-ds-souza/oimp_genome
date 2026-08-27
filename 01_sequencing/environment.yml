@@ -1,0 +1,10 @@
+name: oimp_01_sequencing
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - seqkit
+  - kmer-jellyfish=2.3.1
+  - genomescope2          # optional; the web server was used for the paper
+  - fastp=1.0.1
+  - trinity

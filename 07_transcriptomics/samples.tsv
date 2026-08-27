@@ -1,0 +1,10 @@
+sample_id	stage	sex	structure	group	batch	fastq1	fastq2
+AF1An	adult	female	antenna	adult_female	b1	data/rnaseq/trimmed/AF1An/AF1An_R1_fastp.fastq	data/rnaseq/trimmed/AF1An/AF1An_R2_fastp.fastq
+AF1Th	adult	female	thorax	adult_female	b2	data/rnaseq/trimmed/AF1Th/AF1Th_R1_fastp.fastq	data/rnaseq/trimmed/AF1Th/AF1Th_R2_fastp.fastq
+AF2An	adult	female	antenna	adult_female	b1	data/rnaseq/trimmed/AF2An/AF2An_R1_fastp.fastq	data/rnaseq/trimmed/AF2An/AF2An_R2_fastp.fastq
+AF2Th	adult	female	thorax	adult_female	b2	data/rnaseq/trimmed/AF2Th/AF2Th_R1_fastp.fastq	data/rnaseq/trimmed/AF2Th/AF2Th_R2_fastp.fastq
+AM1An	adult	male	antenna	adult_male	b1	data/rnaseq/trimmed/AM1An/AM1An_R1_fastp.fastq	data/rnaseq/trimmed/AM1An/AM1An_R2_fastp.fastq
+AM2An	adult	male	antenna	adult_male	b1	data/rnaseq/trimmed/AM2An/AM2An_R1_fastp.fastq	data/rnaseq/trimmed/AM2An/AM2An_R2_fastp.fastq
+AM2Th	adult	male	thorax	adult_male	b2	data/rnaseq/trimmed/AM2Th/AM2Th_R1_fastp.fastq	data/rnaseq/trimmed/AM2Th/AM2Th_R2_fastp.fastq
+L1He	larva	NA	head	larva	b1	data/rnaseq/trimmed/L1He/L1He_R1_fastp.fastq	data/rnaseq/trimmed/L1He/L1He_R2_fastp.fastq
+L1Mg	larva	NA	midgut	larva	b2	data/rnaseq/trimmed/L1Mg/L1Mg_R1_fastp.fastq	data/rnaseq/trimmed/L1Mg/L1Mg_R2_fastp.fastq

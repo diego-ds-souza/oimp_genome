@@ -1,0 +1,22 @@
+name: oimp_02_assembly
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - hifiasm=0.16.1
+  - any2fasta=0.4.2
+  - minimap2=2.24
+  - purge_dups=1.2.6
+  - quast=5.0.2
+  - busco=5.2.2
+  - seqkit
+  - samtools
+  - gffread
+  - agat
+  - tidk=0.2.65
+  - circos=0.23           # provides bundlelinks
+  - python=3.10
+  - matplotlib-base
+  - r-base=4.3
+  - r-circlize=0.4.17
+  - r-rcolorbrewer

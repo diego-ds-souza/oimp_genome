@@ -1,0 +1,26 @@
+# Assembly accessions of the comparison genomes (Table S2).
+# O. impluviata is not listed here: its proteome comes from section 03.
+GCA_963669975.1	# Acanthoscelides obtectus
+GCF_000390285.2	# Anoplophora glabripennis
+GCF_022605725.1	# Anthonomus grandis grandis
+GCA_029963805.1	# Aromia moschata
+GCA_917834065.1	# Ceutorhynchus assimilis
+GCF_029955315.1	# Cylas formicarius
+GCF_020466585.1	# Dendroctonus ponderosae
+GCA_918026665.1	# Diabrotica balteata
+GCF_917563875.1	# Diabrotica virgifera virgifera
+GCF_026250575.1	# Diorhabda carinulata
+GCF_026230105.1	# Diorhabda sublineata
+GCF_040115645.1	# Euwallacea fornicatus
+GCF_039881205.1	# Euwallacea similis
+GCA_029955175.1	# Exocentrus adspersus
+GCA_018342105.1	# Gonioctena quinquepunctata
+GCA_041296355.1	# Hypothenemus hampei
+GCF_000500325.1	# Leptinotarsa decemlineata
+GCA_029963825.1	# Molorchus minor
+GCA_918026855.4	# Phaedon cochleariae
+GCA_918026865.1	# Phyllotreta striolata
+GCA_927349885.1	# Psylliodes chrysocephala
+GCA_029963845.1	# Rhamnusium bicolor
+GCF_002938485.1	# Sitophilus oryzae
+GCF_031307605.1	# Tribolium castaneum
